@@ -128,6 +128,7 @@ RCT_EXPORT_METHOD(open:(NSDictionary *)options
  // This is a hack to present the SafariViewController modally
  UINavigationController *safariHackVC = [[UINavigationController alloc] initWithRootViewController:safariVC];
  [safariHackVC setNavigationBarHidden:true animated:false];
+ [safariHackVC setToolbarHidden:true animated:false];
  UIViewController *presentingViewController = RCTPresentedViewController();
  [presentingViewController presentViewController:safariHackVC animated:true completion:nil];
 }
